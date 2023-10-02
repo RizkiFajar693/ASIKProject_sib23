@@ -1,0 +1,1420 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --white: #ffffff;
+  --purple: #9b63c8;
+  --blueviolet: #8a2be2;
+  --green: #16a085;
+  --black: #444;
+  --light-color: #777;
+  --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
+  --text-shadow: 0.4rem 0.4rem 0 rgba(0, 0, 0, 0.2);
+  --border: 0.2rem solid var(--purple);
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: none;
+  transition: all 0.2s ease-out;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 7rem;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 2rem 9%;
+}
+section:nth-child(even) {
+  background: #f5f5f5;
+}
+
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  text-shadow: var(--text-shadow);
+  text-transform: uppercase;
+  color: var(--black);
+  font-size: 5rem;
+  letter-spacing: 0.4rem;
+}
+.heading span {
+  text-transform: uppercase;
+  color: var(--purple);
+}
+.btn {
+  display: inline-block;
+  margin-top: 1 rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  color: var(--purple);
+  cursor: pointer;
+  font-size: 1.7rem;
+  background: #fff;
+}
+.btn .span {
+  padding: 0.7rem 1 rem;
+  border-radius: 0.5rem;
+  background: var(--green);
+  color: #fff;
+  margin-left: 0.5rem;
+}
+.btn:hover {
+  background: var(--blueviolet);
+  color: #fff;
+}
+.btn:hover span {
+  color: var(--green);
+  background-color: #fff;
+  margin-left: 1rem;
+}
+.header {
+  padding: 2rem 9%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+}
+.header .logo {
+  font-size: 2.5rem;
+  color: var(--black);
+}
+.header .logo i {
+  color: var(--purple);
+}
+
+.header .navbar {
+  font-size: 2rem;
+  color: var(--light-color);
+  margin-left: 2rem;
+}
+.header .navbar a {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: var(--purple);
+}
+.header .navbar a:hover {
+  color: var(--black);
+}
+.header .navbar .signup {
+  background: var(--blueviolet);
+  color: #ffffff;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+#menu-btn {
+  font-size: 2.5rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  color: var(--purple);
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.home {
+  display: grid;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.home .image {
+  flex: 1 1 45rem;
+}
+.home .image .images {
+  width: 100%;
+}
+.home .content {
+  flex: 1 1 45rem;
+}
+.home .content h3 {
+  font-size: 4.5rem;
+  color: var(--black);
+  line-height: 1.8;
+  text-shadow: var(--text-shadow);
+}
+.home .content p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 1rem 0;
+}
+.icons-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.icons-container .icons {
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  text-align: center;
+  padding: 2.5rem;
+}
+.icons-container .icons i {
+  font-size: 4.5rem;
+  color: var(--purple);
+  padding-bottom: 0.7rem;
+}
+.icons-container .icons h3 {
+  font-size: 4.5rem;
+  color: var(--black);
+  padding-bottom: 0.5rem 0;
+  text-shadow: var(--text-shadow);
+}
+.icons-container .icons p {
+  font-size: 1.7rem;
+  color: var(--light-color);
+}
+.services .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.services .box-container .box {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  padding: 2.5rem;
+}
+
+.riwayat .box-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(27rem, 1fr));
+  gap: 2rem;
+}
+
+.riwayat .box-container .box {
+  background: #fff;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  padding: 2.5rem;
+}
+
+.box {
+  height: inherit;
+}
+.services .box-container .box i {
+  color: var(--purple);
+  font-size: 5rem;
+  padding-bottom: 0.5rem;
+}
+.services .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+.services .box-container .box p {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+}
+
+.riwayat .box-container .box i {
+  color: var(--purple);
+  font-size: 5rem;
+  padding-bottom: 0.5rem;
+}
+.riwayat .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+.riwayat .box-container .box p {
+  color: var(--light-color);
+  font-size: 1.4rem;
+  line-height: 2;
+}
+.doctors .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.doctors .box-container .box {
+  text-align: center;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+.doctors .box-container .box img {
+  height: 20rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.doctors .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+.doctors .box-container .box span {
+  color: var(--purple);
+  font-size: 1.5rem;
+}
+.doctors .box-container .box .share {
+  padding-top: 2rem;
+}
+.doctors .box-container .box .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: var(--purple);
+  border-radius: 0.5rem;
+  border: var(--border);
+  margin: 0.3rem;
+}
+.doctors .box-container .box .share a:hover {
+  background: var(--blueviolet);
+  color: #fff;
+  box-shadow: var(--box-shadow);
+}
+.testimoni .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.testimoni .box-container .box {
+  text-align: center;
+  background: #fff;
+  border-radius: 0.5rem;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+}
+.testimoni .box-container .box img {
+  height: 20rem;
+  border: var(--border);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.testimoni .box-container .box h3 {
+  color: var(--black);
+  font-size: 2.5rem;
+}
+.testimoni .box-container .box span {
+  color: var(--purple);
+  font-size: 1.5rem;
+}
+.testimoni .box-container .box .share {
+  padding-top: 2rem;
+}
+.testimoni .box-container .box .share a {
+  height: 5rem;
+  width: 5rem;
+  line-height: 4.5rem;
+  font-size: 2rem;
+  color: var(--purple);
+  border-radius: 0.5rem;
+  border: var(--border);
+  margin: 0.3rem;
+}
+.testimoni .box-container .box .share a:hover {
+  background: var(--blueviolet);
+  color: #fff;
+  box-shadow: var(--box-shadow);
+}
+.book .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.book .row .image {
+  flex: 1 1 45rem;
+}
+.book .row .image img {
+  width: 100%;
+}
+.book .row form {
+  flex: 1 1 45rem;
+  background: #fff;
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.book .row form h3 {
+  color: var(--black);
+  padding: 1rem;
+  font-size: 3rem;
+}
+.book .row form .box {
+  width: 100%;
+  margin: 0.7rem 0;
+  border-radius: 0.5rem;
+  border: var(--border);
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: none;
+  padding: 1rem;
+}
+.book .row form .btn {
+  padding: 1rem 4rem;
+}
+.blogs .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+}
+.blogs .box-container .box {
+  border: var(--border);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+.blogs .box-container .box .image {
+  height: 20rem;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.blogs .box-container .box .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.blogs .box-container .box:hover .image img {
+  transform: scale(1.2);
+}
+.blogs .box-container .box .content {
+  padding-top: 1rem;
+}
+
+.blogs .box-container .box .content .icon {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blogs .box-container .box .content .icon a {
+  font-size: 1.4rem;
+  color: var(--light-color);
+}
+.blogs .box-container .box .content .icon a:hover {
+  color: var(--purple);
+}
+.blogs .box-container .box .content h3 {
+  color: var(--black);
+  font-size: 3rem;
+}
+.footer .box-container {
+  display: flex;
+  justify-content: center;
+}
+.footer .box-container h3 {
+  font-size: 2.5rem;
+  color: var(--black);
+  padding: 1rem 0;
+}
+.footer .box-container .box a {
+  display: block;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+}
+.footer .box-container .box a i {
+  padding-right: 0.5rem;
+  color: var(--green);
+}
+.footer .credit {
+  padding: 1rem;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  color: var(--light-color);
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+.footer .credit span {
+  color: var(--purple);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.avatar-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar-button img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: #f8f8f8;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-align: left;
+  right: -5rem;
+  margin-top: 2.7rem;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  color: #333; /* Atur warna teks sesuai kebutuhan */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Warna latar belakang ketika hover */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+  background: #eceaff;
+  color: #525252;
+}
+
+.container-nav {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.logo-nav {
+  font-size: 4rem;
+  padding-top: 10px;
+}
+
+.text-nav {
+  font-size: 1.5rem;
+}
+
+.heigh-navbar {
+  height: 50px;
+  box-shadow: #333;
+}
+
+.shadow-ctm {
+  box-shadow: 0 10px 11px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 10rem;
+  background-color: white;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.avatar:hover .dropdown-menu {
+  display: block;
+}
+
+.profile-banner {
+  height: 350px;
+  background-image: url("https://th.bing.com/th/id/R.31ba7cc779eb847b2231c27ba7b2be40?rik=qETHIq%2fPXnokqA&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f76%2f11%2fXc5msq.jpg&ehk=d3kLaxQYbcbtJ0eQ9g1RMS3c5X9gUdh4F5i1akSa6XY%3d&risl=&pid=ImgRaw&r=0");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 9%;
+}
+
+.aboutUs-banner {
+  height: 350px;
+  background-image: url("https://sa.manriqueeye.com/wp-content/uploads/2016/01/geometic-bg-purple-2-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 9%;
+}
+
+.about-banner {
+  display: flex;
+  margin-top: 5rem;
+}
+
+.about-desc h2 {
+  display: flex;
+  margin-left: 3rem;
+  font-size: 30px;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 4.5rem;
+}
+
+.about-desc p {
+  margin-left: 3rem;
+  font-size: 10px;
+  font-weight: bold;
+}
+.profil-about {
+  height: 200px;
+  width: 200px;
+}
+
+.aboutUs-about {
+  height: 300px;
+  width: 500px;
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.profile-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.activity-history {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.activity-card {
+  background-color: #fff; /* Latar belakang card */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.riwayat-doc {
+  display: flex;
+}
+
+.riwayat-doc h3 {
+  font-weight: bold;
+}
+
+.riwayat-doc p i {
+  font-size: 14px;
+}
+
+/* pagination */
+.data-set-2 {
+  display: none;
+}
+/* Styling tombol navigasi */
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background-color: #e03bf6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* settings */
+.container {
+  display: flex;
+}
+
+.nav2-setting {
+  display: none;
+}
+
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  color: #fff;
+  padding: 20px;
+  transition: width 0.3s ease;
+}
+
+.menu-toggle-sd {
+  display: block;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 1.7rem;
+}
+
+.sidebar ul li:hover {
+  background-color: #555;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+.nav-btn.active {
+  background-color: #f701ff;
+}
+
+/* isi kontent profil */
+.isi-content-profil h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.profil {
+  padding: 2rem;
+  flex: 1;
+}
+
+.akun {
+  padding: 2rem;
+  flex: 1;
+}
+
+.dataPribadi {
+  padding: 2rem;
+  flex: 1;
+}
+
+.radio {
+  display: flex;
+}
+
+.pt-profil {
+  display: flex;
+}
+
+.pt-profil img {
+  width: 100px;
+  height: 100px;
+}
+
+.custom-file-upload label {
+  display: flex;
+  cursor: pointer;
+  background-color: #9a17b4;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  justify-content: center;
+  text-align: center;
+  margin: 10px 10px 0 10px;
+  height: 40px;
+  width: 100px;
+  font-size: 1.5rem;
+}
+
+.custom-file-upload p {
+  margin-left: 10px;
+}
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+
+.table {
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.table-doctor {
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+}
+
+.data-wadah {
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #f8f8f8;
+  flex: 1;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #f715ff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 14px;
+  color: #888;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+}
+
+.ck.ck-editor {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#profile-photo {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.ckeditor {
+  min-height: 150px;
+}
+
+/* doctor */
+.doctor-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.doctor-info {
+  flex: 1;
+  padding: 20px;
+}
+
+.doctor-info h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.doctor-info p {
+  margin: 10px 0;
+}
+
+.doctor-info h2 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.doctor-info a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Styling Medical Actions */
+.medical-actions {
+  flex: 1;
+  padding: 20px;
+  max-width: 300px;
+}
+
+.medical-actions h2 {
+  font-size: 18px;
+}
+
+.medical-actions ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+.medical-actions li {
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+/* doctor2 */
+.profil-doctor {
+  display: flex;
+  background: white;
+  align-items: center;
+  padding: 20px;
+}
+
+.img-doctor {
+  height: 150px;
+  width: 150px;
+  margin-right: 20px;
+}
+
+.profil-doctor h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sub-profesi {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sub-profesi p {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.ket {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spacer {
+  flex-grow: 1;
+  margin-left: 3rem;
+}
+
+.doctor-profile h2 {
+  font-weight: bold;
+}
+
+.sub-profil-doctor p {
+  font-weight: 500;
+  color: black;
+}
+
+.rs {
+  display: flex;
+}
+
+.detail-rs {
+  margin: 10px;
+}
+
+.detail-rs h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.detail-rs p {
+  color: orangered;
+  font-weight: bold;
+}
+
+/* date */
+.date {
+  font-weight: bold;
+  color: black;
+}
+/* jadwal */
+.jadwal {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  color: black;
+}
+
+/* button jadwal */
+.btn-jadwal {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--blueviolet);
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Efek Hover */
+.btn-jadwal:hover {
+  background-color: var(--purple);
+  color: #ffffff;
+}
+
+/* Efek Tombol Aktif (Ditekan) */
+.btn-jadwal:active {
+  background-color: var(--purple);
+  color: #ffffff;
+  transform: translateY(1px);
+}
+
+/* ulasan */
+.review-doctor {
+  height: 50px;
+  width: 50px;
+}
+
+.isi-review {
+  display: flex;
+}
+
+.isi {
+  margin: 10px;
+  color: black;
+}
+
+.isi h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.isi p {
+  color: black;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.page-link {
+  text-decoration: none;
+  background-color: #e2e8f0;
+  color: #4a90e2;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.page-link.active {
+  background-color: #4a90e2;
+  color: white;
+}
+
+/* tindakan medis */
+.btn-doctor {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: orangered;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tindakan li {
+  font-size: 14px;
+}
+
+/* footer */
+.footer-menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu-column {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-menu-column h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-menu-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-menu-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-menu-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Efek Hover */
+.btn-doctor:hover {
+  background-color: orange;
+  color: #ffffff;
+}
+
+/* menu */
+.menu-toggle {
+  display: none;
+}
+
+.menu-list {
+  display: none;
+  position: absolute;
+  right: 10rem;
+  background-color: white;
+  box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.menu-toggle:hover .menu-list {
+  display: block;
+}
+
+.menu-list ul {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+}
+
+.menu-drop {
+  border: var(--border);
+}
+
+.menu-drop li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.ckeditor {
+  height: 150px;
+}
+
+/* alert */
+.floating-alert {
+  display: none;
+  position: fixed;
+  font-size: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  z-index: 9999;
+  transition: top 0.5s ease-in-out;
+}
+
+.show-alert {
+  top: 10px;
+}
+
+/* aboutUs */
+
+/*  about-website */
+.about-web {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(27rem, 1fr));
+}
+
+.about-web .logo-about {
+  height: 300px;
+  width: 300px;
+}
+
+.about-web .title h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+/* keunggulan web */
+.keunggulan-web h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+/* testimoni */
+.testimoni h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+/* team */
+
+.team h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.team-about {
+  display: flex;
+}
+
+.about-pribadi {
+  margin-left: 10px;
+}
+
+.about-pribadi h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.about-pribadi p i {
+  font-weight: bold;
+}
+
+.team-about img {
+  height: 100px;
+  width: 100px;
+}
+
+/* media queries */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 2rem;
+  }
+  section {
+    padding: 2rem;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+@media (max-width: 768px) {
+  #menu-btn {
+    display: initial;
+  }
+  .menu-toggle {
+    display: block;
+  }
+
+  .container {
+    display: contents;
+  }
+
+  .nav2-setting {
+    display: block;
+  }
+
+  .doctor-profile {
+    display: contents;
+  }
+
+  .profil-doctor {
+    display: contents;
+  }
+
+  .sub-profesi {
+    display: contents;
+  }
+
+  .ket {
+    display: contents;
+  }
+
+  .header .navbar {
+    position: absolute;
+    top: 115%;
+    right: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    border: var(--border);
+    width: 30rem;
+    background: #fff;
+    transform: scale();
+    opacity: 0;
+    transform-origin: top right;
+    transition: none;
+  }
+  .header .navbar.active {
+    transform: scale(1);
+    opacity: 1;
+    transition: 0.2s ease-out;
+  }
+  .header .navbar a {
+    font-size: 2rem;
+    display: block;
+    margin: 2.5rem;
+  }
+  .swiper-container {
+    width: 100%;
+  }
+
+  .about-banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-desc {
+    margin-top: -5rem;
+  }
+
+  .about-desc p {
+    color: white;
+  }
+
+  .about-desc h2 {
+    margin-left: -1rem;
+  }
+
+  .riwayat .box-container {
+    grid-template-columns: repeat(1, minmax(27rem, 1fr));
+    gap: 1rem;
+  }
+  .ckeditor {
+    height: 150px;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .nav2-setting {
+    display: block;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .swiper-container {
+    width: 100%;
+  }
+
+  .about-banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-desc {
+    margin-top: -5rem;
+  }
+
+  .about-desc h2 {
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .about-desc p {
+    margin-left: 20rem;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+  }
+  .profil-about {
+    height: 150px;
+    width: 150px;
+    justify-content: center;
+    margin-left: 15rem;
+  }
+  .riwayat .box-container {
+    grid-template-columns: repeat(1, minmax(27rem, 1fr));
+    gap: 1rem;
+  }
+  .ckeditor {
+    height: 150px;
+  }
+
+  .doctor-profile {
+    display: contents;
+  }
+
+  .profil-doctor {
+    display: contents;
+  }
+
+  .sub-profesi {
+    display: contents;
+  }
+
+  .ket {
+    display: contents;
+  }
+}
