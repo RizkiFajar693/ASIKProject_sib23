@@ -1,4 +1,2 @@
-# capstone_project_32p
-
-capstone project.
-healthcare website.
+# CapstoneProject32P
+Capstone Project 32P (Software Engineering)

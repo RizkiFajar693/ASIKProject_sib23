@@ -1,11 +1,563 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>ASIK</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="images/logo2.png" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Import Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <!-- header section start -->
+
+    <nav class="bg-white shadow-ctm p-6">
+      <div class="container-nav mx-auto flex justify-between items-center">
+        <div class="text-purple-500 text-2xl font-semibold">
+          <a href="#" class="logo-nav">ASIK</a>
+        </div>
+        <div class="flex items-center space-x-6">
+          <ul class="flex space-x-6 text-nav">
+            <li class="hidden md:block">
+              <a href="#home" class="text-purple-500 hover:text-gray-400"
+                >Home</a
+              >
+            </li>
+
+            <li class="hidden md:block">
+              <a href="#services" class="text-purple-500 hover:text-gray-400"
+                >Services</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <a href="#doctors" class="text-purple-500 hover:text-gray-400"
+                >Doctors</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <a href="#book" class="text-purple-500 hover:text-gray-400"
+                >Book Appointment</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <a href="about.html" class="text-purple-500 hover:text-gray-400"
+                >About Us</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <a
+                href="signup.html"
+                class="signup text-purple-500 hover:text-gray-400"
+                id="signup-link"
+                >Sign-Up</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <a
+                href="login.html"
+                class="login text-purple-500 hover:text-gray-400"
+                id="login-link"
+                >Login</a
+              >
+            </li>
+          </ul>
+          <div class="flex items-center space-x-4 avatar">
+            <img
+              src="images/doctor1.jpg"
+              alt="Avatar"
+              class="w-16 h-16 rounded-full avatar-image"
+            />
+          </div>
+          <button class="menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Dropdown Menu -->
+    <div class="text-nav menu-list">
+      <ul class="menu-drop">
+        <li>
+          <a href="#home" class="text-purple-500 hover:text-gray-400">Home</a>
+        </li>
+
+        <li>
+          <a href="#services" class="text-purple-500 hover:text-gray-400"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#doctors" class="text-purple-500 hover:text-gray-400"
+            >Doctors</a
+          >
+        </li>
+        <li>
+          <a href="#book" class="text-purple-500 hover:text-gray-400"
+            >Book Appointment</a
+          >
+        </li>
+        <li>
+          <a href="about.html" class="text-purple-500 hover:text-gray-400"
+            >About Us</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Dropdown Menu List -->
+    <div class="dropdown-menu text-nav">
+      <a
+        href="akun.html"
+        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+        ><i class="fa fa-user" aria-hidden="true"></i> Tentang Akun</a
+      >
+      <a
+        href="setting.html"
+        class="block px-4 py-2 text-gray-800 hover:bg-gray-200"
+        ><i class="fa fa-cog" aria-hidden="true"></i> Pengaturan</a
+      >
+      <a href="login.html" class="block px-4 py-2 text-red-600 hover:bg-red-200"
+        ><i class="fa fa-sign-out-alt" aria-hidden="true"></i> Logout</a
+      >
+    </div>
+    <!-- header section end -->
+
+    <div id="successAlert" class="floating-alert">Pesanan berhasil!</div>
+
+    <!-- home section start -->
+    <section class="home" id="home">
+      <div class="image">
+        <img src="images/logo2.png" alt="" />
+      </div>
+      <div class="content">
+        <h3>Anak Ibu Sehat Indonesia Kuat</h3>
+        <p>
+          ASIK or an abbreviation for Anak Ibu Sehat Indonesia Kuat is a
+          website-based health program created to support government programs in
+          reducing the infant mortality rate (IMR) and maternal mortality rate
+          (MMR) in order to be able to achieve the 3rd SDGs target in 2030. On
+          the website that we have provided For this reason, there are several
+          educational features and health services according to family needs to
+          ensure maternal health and child growth and development.
+        </p>
+        <a href="#footer" class="btn">contact us</a>
+      </div>
+    </section>
+    <!-- home section end -->
+
+    <!-- icons section start -->
+    <section class="icons-container">
+      <div class="icons">
+        <i class="fas fa-user-md"></i>
+        <h3>100+</h3>
+        <p>doctors at work</p>
+      </div>
+      <div class="icons">
+        <i class="fas fa-users"></i>
+        <h3>1000</h3>
+        <p>satisfied patients</p>
+      </div>
+      <div class="icons">
+        <i class="fas fa-ambulance"></i>
+        <h3>100</h3>
+        <p>Ambulance</p>
+      </div>
+      <div class="icons">
+        <i class="fas fa-hospital"></i>
+        <h3>50+</h3>
+        <p>Available Hospitals</p>
+      </div>
+    </section>
+    <!-- icons section end -->
+
+    <!-- services section start -->
+    <section class="services" id="services">
+      <h1 class="heading">our <span>services</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-baby-carriage"></i>
+          <h3>Parenting</h3>
+          <p>
+            We provide several types of parenting to prevent disruption to
+            children's growth and development for people who don't know much
+            about stunting. You can learn about parenting here.
+          </p>
+          <a
+            href="https://www.prenagen.com/id/apa-itu-parenting-anak"
+            class="btn"
+            >Learn More</a
+          >
+        </div>
+        <div class="box">
+          <i class="fas fa-ambulance"></i>
+          <h3>24/7 Ambulance</h3>
+          <p>
+            This application provides 24 hour ambulance services to help the
+            public in emergencies. You can order ambulance services here.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+        <div class="box">
+          <i class="fas fa-baby"></i>
+          <h3>Pregnancy Program</h3>
+          <p>
+            Pregnancy Program Consultation is a series of comprehensive
+            examinations by married couples to determine a pregnancy program.
+            This examination is to find out things that hinder pregnancy and
+            efforts to achieve a healthy pregnancy. You Can Learn More Here.
+          </p>
+          <a
+            href="https://www.betterhealth.vic.gov.au/health/healthyliving/pregnancy-week-by-week"
+            class="btn"
+            >Learn More</a
+          >
+        </div>
+        <div class="box">
+          <i class="fas fa-comments"></i>
+          <h3>Doctor's Consultation</h3>
+          <p>
+            We provide free doctor services for consultations with experts
+            regarding stunting online via our website. This makes it easier for
+            people everywhere to maintain and prevent stunting. you can learn
+            more about it here.
+          </p>
+          <a href="#book" class="btn">Learn More</a>
+        </div>
+      </div>
+    </section>
+    <!-- services section end -->
+
+    <!-- doctor section start -->
+    <section class="doctors" id="doctors">
+      <h1 class="heading">our <span>doctors</span></h1>
+      <div class="box-container">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Isi Carousel -->
+            <div class="swiper-slide">
+              <div class="box">
+                <img
+                  src="images/dr. Yoke Kinanthi Putri, Sp.A, IBCLC.jpg.jpg"
+                  alt=""
+                />
+                <h3>dr. Yoke Kinanthi Putri, Sp.A.</h3>
+                <a href="doctor.html">
+                  <span>Pediatrician</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img src="images/dr.-Klara-Yuliarti,-Sp.A(K).jpg" alt="" />
+                <h3>dr. Klara Yuliarti, Sp.A.</h3>
+                <a href="doctor.html">
+                  <span>Pediatrician</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img src="images/dr. Paulus Linardi, Sp.A.jpg.jpg" alt="" />
+                <h3>dr. Paulus Linardi, Sp.A.</h3>
+                <a href="doctor.html">
+                  <span>Pediatrician</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img src="images/dr.-Yohanes-Friedi-Tama,-Sp.OG.jpg" alt="" />
+                <h3>dr. Yohanes Friedi Tama, Sp.OG</h3>
+                <a href="doctor.html">
+                  <span>Obstetricians</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img src="images/dr.-Yulianto-Basuki,-Sp.OG.jpg" alt="" />
+                <h3>dr. Yulianto Basuki, Sp.OG</h3>
+                <a href="doctor.html">
+                  <span>Obstetricians</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="box">
+                <img
+                  src="images/Dr. Olivia Franciska Laksmana, Sp.OG.jpg"
+                  alt=""
+                />
+                <h3>dr. Olivia Franciska Laksmana, Sp.OG</h3>
+                <a href="doctor.html">
+                  <span>Obstetricians</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Tombol Navigasi Carousel -->
+          <!-- <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div> -->
+        </div>
+      </div>
+    </section>
+    <!-- doctor section end -->
+
+    <!-- booking section start -->
+    <section class="book" id="book">
+      <h1 class="heading"><span>Book</span> Now</h1>
+      <div class="row">
+        <div class="image">
+          <img src="images/doctor2.png" alt="" />
+        </div>
+        <form action="">
+          <h3>Book Appointment</h3>
+          <input type="text" placeholder="name" class="box" />
+          <input type="number" placeholder="number" class="box" />
+          <select name="doctor-name" id="doctor-name" class="box">
+            <option value="select">==SELECT DOCTOR==</option>
+            <option value="dr. Yulianto Basuki, Sp.OG">
+              dr. Yulianto Basuki, Sp.OG
+            </option>
+            <option value="dr. Olivia Franciska Laksmana, Sp.OG">
+              dr. Olivia Franciska Laksmana, Sp.OG
+            </option>
+            <option value="dr. Yohanes Friedi Tama, Sp.OG">
+              dr. Yohanes Friedi Tama, Sp.OG
+            </option>
+            <option value="dr. Paulus Linardi, Sp.A.">
+              dr. Paulus Linardi, Sp.A.
+            </option>
+            <option value="dr. Klara Yuliarti, Sp.A.">
+              dr. Klara Yuliarti, Sp.A.
+            </option>
+            <option value="dr. Yoke Kinanthi Putri, Sp.A.">
+              dr. Yoke Kinanthi Putri, Sp.A.
+            </option>
+          </select>
+          <input type="date" class="box" />
+          <textarea
+            name="question"
+            id="question"
+            class="ckeditor box"
+          ></textarea>
+          <input
+            type="submit"
+            value="Book Now"
+            class="btn"
+            onclick="showAlert()"
+          />
+          <input type="reset" value="Reset" class="btn" />
+        </form>
+      </div>
+    </section>
+    <!-- booking section end -->
+    <!-- blogs section start -->
+    <section class="blogs" id="blogs">
+      <h1 class="heading">our <span>blogs</span></h1>
+      <div class="box-container">
+        <div class="box">
+          <div class="image">
+            <img src="images/blog1.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>Mengenal Stunting, dari Penyebab hingga Penanganannya</h3>
+            <a
+              href="https://rsudblora.blorakab.go.id/2022/12/15/mengenal-stunting-penyebab-hingga-cara-pencegahannya/"
+              class="btn"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="images/blog2.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>5 Penyakit Berbahaya yang Bisa Dicegah dengan Imunisasi</h3>
+            <a
+              href="https://hellosehat.com/infeksi/imunisasi-mencegah-penyakit/"
+              class="btn"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <div class="box">
+          <div class="image">
+            <img src="images/blog3.png" alt="" />
+          </div>
+          <div class="content">
+            <h3>
+              Tips Memilih Program Kehamilan bagi Anda yang Tak Kunjung Hamil
+            </h3>
+            <a
+              href="https://hellosehat.com/kehamilan/memilih-program-kehamilan/"
+              class="btn"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blogs section end -->
+
+    <!-- footer section start -->
+    <section class="footer" id="footer">
+      <div class="footer-menu">
+        <div class="footer-menu-column">
+          <h4>Tentang Kami</h4>
+          <ul>
+            <li><a href="#">Karier</a></li>
+            <li><a href="#">Hubungi Kami</a></li>
+            <li><a href="#">Tim Editorial</a></li>
+            <li><a href="#">Aloproteksi</a></li>
+            <li><a href="#">Aloproteksi Corporate</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu-column">
+          <h4>Lainnya</h4>
+          <ul>
+            <li><a href="#">Syarat & Ketentuan</a></li>
+            <li><a href="#">Privasi</a></li>
+            <li><a href="#">Iklan</a></li>
+            <li><a href="#">Gabung di Tim Dokter</a></li>
+            <li><a href="#">Daftarkan Rumah Sakit Anda</a></li>
+          </ul>
+        </div>
+        <div class="footer-menu-column">
+          <h4>Media Sosial</h4>
+          <ul class="social-icons">
+            <li>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-linkedin"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </li>
+          </ul>
+          <div class="contact">
+            <a href="#"><i class="fas fa-phone-alt"></i> 021-12345</a>
+            <a href="#"><i class="fas fa-envelope"></i> asik@gmail.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Indonesia</a>
+          </div>
+        </div>
+      </div>
+      <div class="credit">
+        created by <span>Group32 - Team P - Section Palembang</span>
+      </div>
+    </section>
+    <!-- footer section end -->
+
+    <!-- js -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const avatar = document.querySelector(".avatar");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        avatar.addEventListener("click", function (e) {
+          e.stopPropagation(); // Mencegah penutupan dropdown saat diklik pada avatar
+          dropdownMenu.style.display = "block";
+        });
+
+        document.addEventListener("click", function () {
+          dropdownMenu.style.display = "none";
+        });
+      });
+    </script>
+    <script>
+      function showAlert() {
+        var alert = document.getElementById("successAlert");
+        alert.classList.add("show-alert");
+        alert.style.display = "block";
+
+        setTimeout(function () {
+          alert.classList.remove("show-alert");
+        }, 3000);
+      }
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menuList = document.querySelector(".menu-list");
+
+        menuToggle.addEventListener("click", function (e) {
+          if (menuList.style.display === "block") {
+            menuList.style.display = "none";
+          } else {
+            e.stopPropagation();
+            menuList.style.display = "block";
+          }
+        });
+
+        document.addEventListener("click", function () {
+          menuList.style.display = "none";
+        });
+      });
+    </script>
+
+    <script src="js/navbar.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper;
+
+      function initSwiper() {
+        swiper = new Swiper(".swiper-container", {
+          slidesPerView: getSlidesPerView(),
+          spaceBetween: 20,
+          loop: true,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+      }
+
+      function getSlidesPerView() {
+        if (window.innerWidth >= 1024) {
+          return 3;
+        } else if (window.innerWidth >= 768) {
+          return 2;
+        } else {
+          return 1;
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", initSwiper);
+      window.addEventListener("resize", function () {
+        swiper.destroy();
+        initSwiper();
+      });
+    </script>
+  </body>
 </html>
